@@ -237,5 +237,5 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
-
+fixtures = ['Product']
 website_route_rules = [{'from_route': '/store/<path:app_path>', 'to_route': 'store'},]

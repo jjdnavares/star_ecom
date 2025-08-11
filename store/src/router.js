@@ -6,19 +6,22 @@ const routes = [
 	{
 		path: "/",
 		name: "Home",
-		component: () => import("@/pages/Home.vue"),
-		meta: {
-			requiresAuth: false,
-		},
+		redirect: { name: "ProductsPage" }
 	},
-	// {
-	// 	name: "Login",
-	// 	path: "/account/login",
-	// 	component: () => import("@/pages/Login.vue"),
-	// },
+	{
+		name: "ProductsPage",
+		path: "/products",
+		component: () => import("@/pages/Products.vue"),
+	},
+	{
+		name: "ProductDetailsPage",
+		path: "/product/:name",
+		component: () => import("@/pages/ProductDetails.vue"),
+	},
 	{
 		path: "/checkout",
 		name: "CheckoutPage",
+		component: () => import("@/pages/Checkout.vue"),
 		meta: {
 			requiresAuth: true,
 		},
